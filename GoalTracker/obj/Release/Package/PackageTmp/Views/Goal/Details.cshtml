@@ -1,0 +1,82 @@
+﻿@model Model.GoalDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GoalDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InterestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompoundInterest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompoundInterest)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GoalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

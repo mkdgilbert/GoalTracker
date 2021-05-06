@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Model.AssetListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create a New Asset", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableCash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearlyIncome)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableCash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearlyIncome)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AssetId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AssetId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AssetId })
+            </td>
+        </tr>
+    }
+
+</table>
